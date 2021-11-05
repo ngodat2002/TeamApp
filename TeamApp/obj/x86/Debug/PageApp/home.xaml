@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="TeamApp.PageApp.home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TeamApp.PageApp"
+    xmlns:model="using:TeamApp.Model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="Crimson" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="1558" Grid.Row="0" Grid.Column="0"/>
+        <Rectangle Fill="Crimson" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="1558" Grid.Row="0" Grid.Column="1"/>
+        <Image Source="/Assets/logo.png" HorizontalAlignment="Left" Height="100" Margin="54,10,0,0" VerticalAlignment="Top" Width="100" Grid.Row="0" Grid.Column="0"/>
+        <TextBlock Text="C# UI Design By SaLaaR HuSceyN" Margin="150,20" FontFamily="Verdana"  Grid.Row="0" />
+        <TextBlock Margin="80,170" FontWeight="Medium" Text="Only" FontSize="15" Foreground="#FFBF00" Grid.Row="0" Grid.Column="0" FontFamily="Verdana"/>
+        <TextBlock Margin="90,190" FontWeight="Bold" Text="$19" FontSize="100" Foreground="#FFBF00" Grid.Row="0" Grid.Column="0" FontFamily="Verdana"/>
+        <TextBlock Text="Cheesebuger" Margin="90,320" FontWeight="Medium" FontSize="26" Foreground="Black" Grid.Row="0" Grid.Column="0" FontFamily="Verdana"/>
+        <TextBlock Text="With Onions and tomato and ketchup" Margin="95,360" FontSize="16" Foreground="Black" Grid.Row="0" Grid.Column="0" FontFamily="Verdana"/>
+        <TextBlock x:ConnectionId='2' TextAlignment="Start" TextWrapping="Wrap" Margin="95,400" Foreground="Black" Grid.Row="0" Grid.Column="0" FontFamily="Verdana"                                              ><Run Text="Lorem ipsum dolor sit amet, "/><LineBreak/><Run Text="consectetur adipisicing elit,"/><Run Text="sed do"/><LineBreak/><Run Text="eiusmod tempor incididunt ut labore ef "/><LineBreak/><Run Text="dolore magna "/><Run Text="aqulia. Ut enim ad minim veniam,"/><LineBreak/><Run Text="quis nastrud exercitation ullamco"/></TextBlock>
+        <Button Margin="95,510" Content="Order Now" VerticalAlignment="Center" Width="350" Background="#bbae02" Foreground="White"/>
+
+        <Image Source="/Assets/buger2.png" Grid.Row="0" Grid.Column="1" Width="500" Height="400" RenderTransformOrigin="0.308,0.015" Margin="0,180,176,419"/>
+    </Grid>
+</Page>
+

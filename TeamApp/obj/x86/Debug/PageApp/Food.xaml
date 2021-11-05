@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="TeamApp.PageApp.Food"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TeamApp.PageApp"
+    xmlns:model="using:TeamApp.Model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="Crimson" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="1558" Grid.Row="0" Grid.Column="0"/>
+        <Rectangle Fill="Crimson" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="1558" Grid.Row="0" Grid.Column="1"/>
+        <Image Source="/Assets/logo.png" HorizontalAlignment="Left" Height="100" Margin="54,10,0,0" VerticalAlignment="Top" Width="100" Grid.Row="0" Grid.Column="0"/>
+        <TextBlock Text="C# UI Design By SaLaaR HuSceyN"  FontFamily="Verdana" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="165,25,0,30" RenderTransformOrigin="-1.943,0.105"/>
+
+        <GridView x:ConnectionId='2' x:Name="Product" Margin="70,180,0,0"                                             Grid.ColumnSpan="2">
+            <GridView.ItemTemplate >
+                <DataTemplate                            >
+                    <Grid x:ConnectionId='4' Background="#DCDCDC" Width="250" Margin="0,20,50,0">
+                        <StackPanel>
+                            <TextBlock x:ConnectionId='5' Margin="20,0,0,0"                             FontSize="20" FontWeight="Bold"/>
+                            <Image Width="240" Margin="0,5,0,0">
+                                <Image.Source>
+                                    <BitmapImage x:ConnectionId='9'                                   />
+                                </Image.Source>
+                            </Image>
+                            <TextBlock x:ConnectionId='6' FontSize="13" FontFamily="Verdana" Margin="0,5,0,0"                             TextWrapping="Wrap"  TextAlignment="Center"/>
+                            <Grid Margin="0,15,0,10">
+                                <TextBlock x:ConnectionId='7' FontFamily="Verdana" Margin="10,0,0,0"                       FontSize="18" FontWeight="Bold" Foreground="Blue"/>
+                                <Button x:ConnectionId='8'                       Margin="145,0,0,0" Content="Read More" Width="100" Height="30" Background="#bbae02" Foreground="White"/>
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+
+        </GridView>
+    </Grid>
+</Page>
+
