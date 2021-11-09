@@ -10,26 +10,69 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
         <Grid.RowDefinitions>
+            <RowDefinition Height="240"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Rectangle Fill="Crimson" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="1558" Grid.Row="0" Grid.Column="0"/>
-        <Rectangle Fill="Crimson" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="1558" Grid.Row="0" Grid.Column="1"/>
-        <Image Source="/Assets/logo.png" HorizontalAlignment="Left" Height="100" Margin="54,10,0,0" VerticalAlignment="Top" Width="100" Grid.Row="0" Grid.Column="0"/>
-        <TextBlock Text="C# UI Design By SaLaaR HuSceyN" Margin="150,20" FontFamily="Verdana"  Grid.Row="0" />
-        <TextBlock Margin="80,170" FontWeight="Medium" Text="Only" FontSize="15" Foreground="#FFBF00" Grid.Row="0" Grid.Column="0" FontFamily="Verdana"/>
-        <TextBlock Margin="90,190" FontWeight="Bold" Text="$19" FontSize="100" Foreground="#FFBF00" Grid.Row="0" Grid.Column="0" FontFamily="Verdana"/>
-        <TextBlock Text="Cheesebuger" Margin="90,320" FontWeight="Medium" FontSize="26" Foreground="Black" Grid.Row="0" Grid.Column="0" FontFamily="Verdana"/>
-        <TextBlock Text="With Onions and tomato and ketchup" Margin="95,360" FontSize="16" Foreground="Black" Grid.Row="0" Grid.Column="0" FontFamily="Verdana"/>
-        <TextBlock x:ConnectionId='2' TextAlignment="Start" TextWrapping="Wrap" Margin="95,400" Foreground="Black" Grid.Row="0" Grid.Column="0" FontFamily="Verdana"                                              ><Run Text="Lorem ipsum dolor sit amet, "/><LineBreak/><Run Text="consectetur adipisicing elit,"/><Run Text="sed do"/><LineBreak/><Run Text="eiusmod tempor incididunt ut labore ef "/><LineBreak/><Run Text="dolore magna "/><Run Text="aqulia. Ut enim ad minim veniam,"/><LineBreak/><Run Text="quis nastrud exercitation ullamco"/></TextBlock>
-        <Button Margin="95,510" Content="Order Now" VerticalAlignment="Center" Width="350" Background="#bbae02" Foreground="White"/>
+        <Grid Height="240" VerticalAlignment="Top" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="225"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="Crimson" Margin="0,-10,0,0" RenderTransformOrigin="0.499,-0.14"/>
+            <Grid Margin="15,15,0,0" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="0.8*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Margin="0,-10,0,0" Background="Crimson" Width="180">
+                    <StackPanel>
+                        <Image Source="/Assets/LogoJB_New-02.png" Width="100" Height="100" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Fast Foods" FontSize="30" Margin="0,15,0,0" HorizontalAlignment="Center" Foreground="White" FontFamily="Forte" FontWeight="Bold" />
+                        <TextBlock Text="Restaurents" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="20" Foreground="White" FontFamily="Arial"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBlock Text="C# UI Design By SaLaaR HuSceyN" Margin="0,20,0,0" FontFamily="Verdana"/>
+                </Grid>
+                <Grid Grid.Column="3" HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <FontIcon Grid.Column="1" Glyph="&#xEA8F;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Top" Margin="0,30,20,0" HorizontalAlignment="Center" Foreground="#646464" FontSize="20" />
+                    <FontIcon Grid.Column="2" Glyph="&#xF8B0;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Top" Margin="0,30,0,0" HorizontalAlignment="Left" Foreground="#646464" FontSize="20"/>
+                    <FontIcon Grid.Column="2" Glyph="&#xE7E8;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Top" Margin="0,30,50,0" HorizontalAlignment="Right" Foreground="#646464" FontSize="20" Width="30"  Grid.ColumnSpan="2"/>
+                </Grid>
+            </Grid>
+        </Grid>
 
-        <Image Source="/Assets/buger2.png" Grid.Row="0" Grid.Column="1" Width="500" Height="400" RenderTransformOrigin="0.308,0.015" Margin="0,180,176,419"/>
+        <GridView x:ConnectionId='2' x:Name="Product" Grid.Row="1" Margin="170,60,0,0">
+            <GridView.ItemTemplate >
+                <DataTemplate                            >
+                    <Grid x:ConnectionId='4' Background="#DCDCDC" Width="250" Margin="0,20,50,0">
+                        <StackPanel>
+                            <TextBlock x:ConnectionId='5' Margin="20,0,0,0"                             FontSize="20" FontWeight="Bold"/>
+                            <Image Width="240" Margin="0,5,0,0">
+                                <Image.Source>
+                                    <BitmapImage x:ConnectionId='9'                                   />
+                                </Image.Source>
+                            </Image>
+                            <TextBlock x:ConnectionId='6' FontSize="13" TextAlignment="Center" FontFamily="Verdana" Margin="0,5,0,0"                             LineStackingStrategy="MaxHeight" TextWrapping="Wrap" MaxLines="2" LineHeight="10"/>
+                            <Grid Margin="0,15,0,10">
+                                <TextBlock x:ConnectionId='7' FontFamily="Verdana" Margin="10,0,0,0"                       FontSize="18" FontWeight="Bold" Foreground="Blue"/>
+                                <Button x:ConnectionId='8'                       Margin="145,0,0,0" Content="Read More" Width="100" Height="30" Background="#bbae02" Foreground="White"/>
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+
+        </GridView>
     </Grid>
 </Page>
 

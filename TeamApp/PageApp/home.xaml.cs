@@ -12,6 +12,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TeamApp.Model;
+using Windows.UI.Xaml.Media.Imaging;
+using TeamApp.Model.Entity;
+using TeamApp.PageApp.Services;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,11 +29,32 @@ namespace TeamApp.PageApp
         public home()
         {
             this.InitializeComponent();
+            RenderFood();
+        }
+        public async void RenderFood()
+        {
+            // if (categories != null)
+            //     {
+            //       foreach (var c in categories.data)
+            //     {
+            //       MenuSpl.Items.Add(new MenuItem() { Name = c.name, Icon = "\uF119", MenuPage = "take" });
+            // }
+            //  }
+            ApiService apiService1 = new ApiService();
+            Foods foods = await apiService1.GetFoods();
+            if (foods != null)
+            {
+                foreach (var c in foods.data)
+                {
+                    Product.Items.Add(new Products() { id = c.id, ProductName = c.name, Description = c.description, Price = "$" + c.price, Img = new BitmapImage(new Uri(c.image)) });
+                }
+            }
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
     }
 }

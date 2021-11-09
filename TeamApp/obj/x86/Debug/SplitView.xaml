@@ -29,6 +29,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF142;" Foreground="White" HorizontalAlignment="Left" Margin="10,740,0,0"/>
             </RelativePanel>
         </SplitView.Pane>
         <SplitView.Content>

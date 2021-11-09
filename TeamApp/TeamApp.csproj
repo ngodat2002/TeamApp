@@ -116,6 +116,7 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Apdter\ApiURL.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -123,6 +124,8 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\MenuItem.cs" />
+    <Compile Include="Model\Entity\DTO.cs" />
+    <Compile Include="Model\ProductDetails.cs" />
     <Compile Include="Model\Products.cs" />
     <Compile Include="PageApp\collection.xaml.cs">
       <DependentUpon>collection.xaml</DependentUpon>
@@ -136,12 +139,16 @@
     <Compile Include="PageApp\Food.xaml.cs">
       <DependentUpon>Food.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageApp\FoodCategories.xaml.cs">
+      <DependentUpon>FoodCategories.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageApp\home.xaml.cs">
       <DependentUpon>home.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageApp\payment.xaml.cs">
       <DependentUpon>payment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageApp\Services\ApiService.cs" />
     <Compile Include="PageApp\take.xaml.cs">
       <DependentUpon>take.xaml</DependentUpon>
     </Compile>
@@ -159,6 +166,7 @@
     <Content Include="Assets\buger.png" />
     <Content Include="Assets\buger2.png" />
     <Content Include="Assets\logo.png" />
+    <Content Include="Assets\LogoJB_New-02.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -193,6 +201,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageApp\FoodCategories.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageApp\home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -213,6 +225,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />

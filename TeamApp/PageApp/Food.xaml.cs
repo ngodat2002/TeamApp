@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using TeamApp.Model;
 using Windows.UI.Xaml.Media.Imaging;
+using TeamApp.Model.Entity;
+using TeamApp.PageApp.Services;
+
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -28,22 +31,7 @@ namespace TeamApp.PageApp
         public Food()
         {
             this.InitializeComponent();
-            var p1 = new Products() { ProductName = "Burger", Description = "Lorem ipsum is a dummy text which is used as a placeholder" ,Price="$13",Img =  new BitmapImage(new Uri("https://massageishealthy.com/wp-content/uploads/2019/06/hinh-anh-do-an-hinh-anh-mon-an-thuc-an-ngon-dep-viet-nam-the-gioi-4.png"))};
-            var p2 = new Products() { ProductName = "Cake", Description = "Lorem ipsum is a dummy text which is used as a placeholder", Price = "$23", Img = new BitmapImage(new Uri("https://massageishealthy.com/wp-content/uploads/2019/06/hinh-anh-do-an-hinh-anh-mon-an-thuc-an-ngon-dep-viet-nam-the-gioi-4.png")) };
-            var p3 = new Products() { ProductName = "Pizza", Description = "Lorem ipsum is a dummy text which is used as a placeholder", Price = "$33", Img = new BitmapImage(new Uri("https://massageishealthy.com/wp-content/uploads/2019/06/hinh-anh-do-an-hinh-anh-mon-an-thuc-an-ngon-dep-viet-nam-the-gioi-4.png")) };
-            Product.Items.Add(p1);
-            Product.Items.Add(p2);
-            Product.Items.Add(p3);
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
-        private void Product_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
+          
         }
     }
 }

@@ -13,7 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using TeamApp.Model;
-
+using TeamApp.Model.Entity;
+using TeamApp.PageApp.Services;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace TeamApp
@@ -42,6 +43,21 @@ namespace TeamApp
             MenuSpl.Items.Add(menu5);
             MenuSpl.Items.Add(menu6);
             MenuSpl.Items.Add(menu7);
+
+            RenderDerCategoriesToMenu();
+        }
+        
+        public async void RenderDerCategoriesToMenu()
+        {
+            ApiService apiService = new ApiService();
+            Categories categories = await apiService.GetCategories();
+            if (categories != null)
+            {
+                foreach(var c in categories.data)
+                {
+                    MenuSpl.Items.Add(new MenuItem() { Name = c.name, Icon = "\uED56",MenuPage ="categories" ,Category = c});
+                    }
+            }
         }
 
         private void FontIcon_Tapped(object sender, TappedRoutedEventArgs e)
@@ -74,6 +90,9 @@ namespace TeamApp
                     break;
                 case "customer":
                     MainFrame.Navigate(typeof(PageApp.customer));
+                    break;
+                case "categories":
+                    MainFrame.Navigate(typeof(PageApp.FoodCategories),selected.Category);
                     break;
             }
         }
