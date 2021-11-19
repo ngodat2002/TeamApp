@@ -14,15 +14,18 @@
         <GridView x:ConnectionId='3' x:Name="Products" Margin="10">
             <GridView.ItemTemplate>
                 <DataTemplate                        >
-                    <StackPanel x:ConnectionId='5'>
+                    <GridViewItem x:ConnectionId='5'>
+                        <StackPanel>
                         <Image Width="150">
                             <Image.Source>
-                                <BitmapImage x:ConnectionId='8'                           />
+                                <BitmapImage x:ConnectionId='9'                           />
                             </Image.Source>
                         </Image>
                         <TextBlock x:ConnectionId='6'                      FontSize="16"/>
                         <TextBlock x:ConnectionId='7'                       FontSize="14" Foreground="Red"/>
+                        <Button x:ConnectionId='8' Content="Add To Cart"                                       Width="100" Height="30" Background="#bbae02" Foreground="White"/>
                     </StackPanel>
+                    </GridViewItem>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>

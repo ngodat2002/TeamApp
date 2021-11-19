@@ -16,6 +16,7 @@ using TeamApp.Model;
 using Windows.UI.Xaml.Media.Imaging;
 using TeamApp.Model.Entity;
 using TeamApp.PageApp.Services;
+using TeamApp.Apdter;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,6 +31,8 @@ namespace TeamApp.PageApp
         {
             this.InitializeComponent();
             RenderFood();
+            SQLiteHelper sQ = SQLiteHelper.GetInstance();
+
         }
         public async void RenderFood()
         {
@@ -51,10 +54,7 @@ namespace TeamApp.PageApp
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+    
 
     }
 }

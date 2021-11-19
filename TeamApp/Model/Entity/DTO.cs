@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Media.Imaging;
+
 namespace TeamApp.Model.Entity
 {
     public class Category
@@ -25,7 +26,7 @@ namespace TeamApp.Model.Entity
         public string name { get; set; }
         public string image { get; set; }
         public string description { get; set; }
-        public string price { get; set; }
+        public int price { get; set; }
     }
     //FOOD 
     public class Foods
@@ -47,6 +48,15 @@ namespace TeamApp.Model.Entity
         public FoodOfCategory data { get; set; }
     }
     //END CATEGORY
+    public class OrderDetail
+    {
+        public int order_id { get; set; }
+    }
 
+    public class CreateOrder
+    {
+        public string message { get; set; }
+        public OrderDetail data { get; set; }
+    }
 
 }

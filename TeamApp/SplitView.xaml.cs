@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Navigation;
 using TeamApp.Model;
 using TeamApp.Model.Entity;
 using TeamApp.PageApp.Services;
+using Windows.UI.Xaml.Media.Imaging;
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace TeamApp
@@ -28,13 +30,13 @@ namespace TeamApp
         {
             this.InitializeComponent();
             MainFrame.Navigate(typeof(PageApp.home));
-            var menu1 = new MenuItem() { Name = "Home", MenuPage = "homepage", Icon = "\uE80F" };
-            var menu2 = new MenuItem() { Name = "Eat-In", MenuPage = "eat", Icon = "\uED56" };
-            var menu3 = new MenuItem() { Name = "Collection", MenuPage = "collection", Icon = "\uE7AC" };
-            var menu4 = new MenuItem() { Name = "Delivery", MenuPage = "delivery", Icon = "\uEA5E" };
-            var menu5 = new MenuItem() { Name = "Take Away", MenuPage = "take", Icon = "\uF119" };
-            var menu6 = new MenuItem() { Name = "Driver Payment", MenuPage = "payment", Icon = "\uEC5C" };
-            var menu7 = new MenuItem() { Name = "Customers", MenuPage = "customer", Icon = "\uE8D4" };
+            var menu1 = new MenuItem() { Name = "Home", MenuPage = "homepage", Icon = new BitmapImage(new Uri("ms-appx:///Assets/home.png")) };
+            var menu2 = new MenuItem() { Name = "Eat-In", MenuPage = "eat", Icon = new BitmapImage(new Uri("ms-appx:///Assets/eat-in.png")) };
+            var menu3 = new MenuItem() { Name = "Collection", MenuPage = "collection", Icon = new BitmapImage(new Uri("ms-appx:///Assets/collection.png")) };
+            var menu4 = new MenuItem() { Name = "Delivery", MenuPage = "delivery", Icon = new BitmapImage(new Uri("ms-appx:///Assets/delivery.png")) };
+            var menu5 = new MenuItem() { Name = "Take Away", MenuPage = "take", Icon = new BitmapImage(new Uri("ms-appx:///Assets/takeaway2.jpg")) };
+            var menu6 = new MenuItem() { Name = "Driver Payment", MenuPage = "payment", Icon = new BitmapImage(new Uri("ms-appx:///Assets/payment.png")) };
+            var menu7 = new MenuItem() { Name = "Customers", MenuPage = "customer", Icon = new BitmapImage(new Uri("ms-appx:///Assets/customer.png")) };
 
             MenuSpl.Items.Add(menu1);
             MenuSpl.Items.Add(menu2);
@@ -44,22 +46,9 @@ namespace TeamApp
             MenuSpl.Items.Add(menu6);
             MenuSpl.Items.Add(menu7);
 
-            RenderDerCategoriesToMenu();
+   
         }
         
-        public async void RenderDerCategoriesToMenu()
-        {
-            ApiService apiService = new ApiService();
-            Categories categories = await apiService.GetCategories();
-            if (categories != null)
-            {
-                foreach(var c in categories.data)
-                {
-                    MenuSpl.Items.Add(new MenuItem() { Name = c.name, Icon = "\uED56",MenuPage ="categories" ,Category = c});
-                    }
-            }
-        }
-
         private void FontIcon_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Splv.IsPaneOpen = !Splv.IsPaneOpen;
@@ -74,7 +63,7 @@ namespace TeamApp
                     MainFrame.Navigate(typeof(PageApp.home));
                     break;
                 case "eat":
-                    MainFrame.Navigate(typeof(PageApp.Food));
+                    MainFrame.Navigate(typeof(PageApp.Eat));
                     break;
                 case "collection":
                     MainFrame.Navigate(typeof(PageApp.collection));
@@ -91,9 +80,7 @@ namespace TeamApp
                 case "customer":
                     MainFrame.Navigate(typeof(PageApp.customer));
                     break;
-                case "categories":
-                    MainFrame.Navigate(typeof(PageApp.FoodCategories),selected.Category);
-                    break;
+            
             }
         }
     }

@@ -22,8 +22,12 @@
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <FontIcon x:ConnectionId='7'  Foreground="White" Grid.Column="0" FontFamily="Segoe MDL2 Assets"                      />
-                                    <TextBlock x:ConnectionId='8' FontFamily="Verdana" Foreground="White" Grid.Column="1"                      Margin="20,8,0,0"/>
+                                    <Image  Width="20" VerticalAlignment="Center" >
+                                        <Image.Source>
+                                            <BitmapImage x:ConnectionId='8'                                    />
+                                        </Image.Source>
+                                    </Image>
+                                    <TextBlock x:ConnectionId='7' FontFamily="Verdana" Foreground="White" Grid.Column="1"                      Margin="20,8,0,0"/>
                                 </Grid>
                             </ListViewItem>
                         </DataTemplate>

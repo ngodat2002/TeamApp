@@ -14,7 +14,8 @@
         <GridView x:Name="Products" Margin="10">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="model:Food">
-                    <StackPanel>
+                    <GridViewItem>
+                        <StackPanel>
                         <Image Width="150">
                             <Image.Source>
                                 <BitmapImage UriSource="{x:Bind image}"/>
@@ -22,7 +23,9 @@
                         </Image>
                         <TextBlock Text="{x:Bind name}" FontSize="16"/>
                         <TextBlock Text="{x:Bind price}" FontSize="14" Foreground="Red"/>
+                        <Button Content="Add To Cart" Tag="{x:Bind id}" Click="Add_To_Cart" Width="100" Height="30" Background="#bbae02" Foreground="White"/>
                     </StackPanel>
+                    </GridViewItem>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>

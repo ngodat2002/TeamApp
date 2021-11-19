@@ -22,7 +22,11 @@
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <FontIcon  Foreground="White" Grid.Column="0" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind Icon}"/>
+                                    <Image  Width="20" VerticalAlignment="Center" >
+                                        <Image.Source>
+                                            <BitmapImage UriSource="{x:Bind Icon.UriSource}"/>
+                                        </Image.Source>
+                                    </Image>
                                     <TextBlock FontFamily="Verdana" Foreground="White" Grid.Column="1" Text="{x:Bind Name}" Margin="20,8,0,0"/>
                                 </Grid>
                             </ListViewItem>
