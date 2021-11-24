@@ -7,6 +7,20 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace TeamApp.Model.Entity
 {
+    public class Home
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string image { get; set; }
+        public string description { get; set; }
+        public int price { get; set; }
+    }
+
+    public class Homes
+    {
+        public string message { get; set; }
+        public List<Home> data { get; set; }
+    }
     public class Category
     {
         public int id { get; set; }
@@ -58,5 +72,19 @@ namespace TeamApp.Model.Entity
         public string message { get; set; }
         public OrderDetail data { get; set; }
     }
+    //detail
+    public class FoodDetail
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string image { get; set; }
+        public string description { get; set; }
+        public int price { get; set; }
+    }
 
+    public class FoodDetails
+    {
+        public string message { get; set; }
+        public FoodDetail data { get; set; }
+    }
 }

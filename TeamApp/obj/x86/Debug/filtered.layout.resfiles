@@ -7,7 +7,9 @@ Assets\collection.png
 Assets\customer.png
 Assets\delivery.png
 Assets\eat-in.png
+Assets\eat-in2.png
 Assets\home.png
+Assets\home2.png
 Assets\LockScreenLogo.scale-200.png
 Assets\logo.png
 Assets\LogoJB_New-02.png
@@ -26,6 +28,8 @@ PageApp\customer.xbf
 PageApp\delivery.xbf
 PageApp\Eat.xbf
 PageApp\FoodCategories.xbf
+PageApp\FoodDeatilOfEatIn.xbf
+PageApp\FoodDetail.xbf
 PageApp\home.xbf
 PageApp\payment.xbf
 PageApp\take.xbf

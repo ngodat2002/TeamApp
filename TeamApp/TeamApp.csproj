@@ -146,6 +146,12 @@
     <Compile Include="PageApp\FoodCategories.xaml.cs">
       <DependentUpon>FoodCategories.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageApp\FoodDeatilOfEatIn.xaml.cs">
+      <DependentUpon>FoodDeatilOfEatIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageApp\FoodDetail.xaml.cs">
+      <DependentUpon>FoodDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageApp\home.xaml.cs">
       <DependentUpon>home.xaml</DependentUpon>
     </Compile>
@@ -172,9 +178,11 @@
     <Content Include="Assets\buger.png" />
     <Content Include="Assets\buger2.png" />
     <Content Include="Assets\delivery.png" />
+    <Content Include="Assets\eat-in2.png" />
     <Content Include="Assets\home.png" />
     <Content Include="Assets\collection.png" />
     <Content Include="Assets\customer.png" />
+    <Content Include="Assets\home2.png" />
     <Content Include="Assets\logo.png" />
     <Content Include="Assets\LogoJB_New-02.png" />
     <Content Include="Assets\payment.png" />
@@ -216,6 +224,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageApp\FoodCategories.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageApp\FoodDeatilOfEatIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageApp\FoodDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

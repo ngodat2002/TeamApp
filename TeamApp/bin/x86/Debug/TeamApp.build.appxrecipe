@@ -55,6 +55,9 @@
     <AppxPackagedFile Include="C:\Users\Admin\source\SEM3\TeamApp\TeamApp\Assets\delivery.png">
       <PackagePath>Assets\delivery.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\source\SEM3\TeamApp\TeamApp\Assets\eat-in2.png">
+      <PackagePath>Assets\eat-in2.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\SEM3\TeamApp\TeamApp\Assets\home.png">
       <PackagePath>Assets\home.png</PackagePath>
     </AppxPackagedFile>
@@ -63,6 +66,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\SEM3\TeamApp\TeamApp\Assets\customer.png">
       <PackagePath>Assets\customer.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\source\SEM3\TeamApp\TeamApp\Assets\home2.png">
+      <PackagePath>Assets\home2.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\SEM3\TeamApp\TeamApp\Assets\logo.png">
       <PackagePath>Assets\logo.png</PackagePath>
@@ -132,6 +138,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\SEM3\TeamApp\TeamApp\bin\x86\Debug\PageApp\FoodCategories.xbf">
       <PackagePath>PageApp\FoodCategories.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\source\SEM3\TeamApp\TeamApp\bin\x86\Debug\PageApp\FoodDeatilOfEatIn.xbf">
+      <PackagePath>PageApp\FoodDeatilOfEatIn.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\source\SEM3\TeamApp\TeamApp\bin\x86\Debug\PageApp\FoodDetail.xbf">
+      <PackagePath>PageApp\FoodDetail.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\SEM3\TeamApp\TeamApp\bin\x86\Debug\PageApp\home.xbf">
       <PackagePath>PageApp\home.xbf</PackagePath>

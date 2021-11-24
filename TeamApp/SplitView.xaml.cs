@@ -30,11 +30,11 @@ namespace TeamApp
         {
             this.InitializeComponent();
             MainFrame.Navigate(typeof(PageApp.home));
-            var menu1 = new MenuItem() { Name = "Home", MenuPage = "homepage", Icon = new BitmapImage(new Uri("ms-appx:///Assets/home.png")) };
-            var menu2 = new MenuItem() { Name = "Eat-In", MenuPage = "eat", Icon = new BitmapImage(new Uri("ms-appx:///Assets/eat-in.png")) };
+            var menu1 = new MenuItem() { Name = "Home", MenuPage = "homepage", Icon = new BitmapImage(new Uri("ms-appx:///Assets/home2.png")) };
+            var menu2 = new MenuItem() { Name = "Eat-In", MenuPage = "eat", Icon = new BitmapImage(new Uri("ms-appx:///Assets/eat-in2.png")) };
             var menu3 = new MenuItem() { Name = "Collection", MenuPage = "collection", Icon = new BitmapImage(new Uri("ms-appx:///Assets/collection.png")) };
             var menu4 = new MenuItem() { Name = "Delivery", MenuPage = "delivery", Icon = new BitmapImage(new Uri("ms-appx:///Assets/delivery.png")) };
-            var menu5 = new MenuItem() { Name = "Take Away", MenuPage = "take", Icon = new BitmapImage(new Uri("ms-appx:///Assets/takeaway2.jpg")) };
+            var menu5 = new MenuItem() { Name = "Take Away", MenuPage = "take", Icon = new BitmapImage(new Uri("ms-appx:///Assets/eat-in.png")) };
             var menu6 = new MenuItem() { Name = "Driver Payment", MenuPage = "payment", Icon = new BitmapImage(new Uri("ms-appx:///Assets/payment.png")) };
             var menu7 = new MenuItem() { Name = "Customers", MenuPage = "customer", Icon = new BitmapImage(new Uri("ms-appx:///Assets/customer.png")) };
 

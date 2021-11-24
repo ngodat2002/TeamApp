@@ -27,6 +27,7 @@ namespace TeamApp.PageApp
     /// </summary>
     public sealed partial class FoodCategories : Page
     {
+        public static CategoryDetail categoryDetail;
         public FoodCategories()
         {
             this.InitializeComponent();
@@ -35,14 +36,15 @@ namespace TeamApp.PageApp
         {
             base.OnNavigatedTo(e);
             Category category = e.Parameter as Category;
-            CategoryName.Text = category.name;
+          
             RenderCategoryDetails(category);
         }
 
         private async void RenderCategoryDetails(Category category)
         {
             ApiService service = new ApiService();
-            CategoryDetail categoryDetail = await service.CategoryDetail(category);
+            categoryDetail = await service.CategoryDetail(category);
+
             if (categoryDetail != null)
             {
                 foreach(var f in categoryDetail.data.foods)
@@ -51,6 +53,7 @@ namespace TeamApp.PageApp
                 }
             }
         }
+
 
         private void Add_To_Cart(object sender, RoutedEventArgs e)
         {
@@ -61,6 +64,19 @@ namespace TeamApp.PageApp
             service.AddToCart(item);
 
             var list = service.GetCart();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var id = ((Button)sender).Tag;
+            foreach (var c in categoryDetail.data.foods)
+            {
+                if ((int)id == (uint)c.id)
+                {
+                    Food a = c;
+                    next.Navigate(typeof(PageApp.FoodDeatilOfEatIn), a);
+                }
+            }
         }
     }
 }

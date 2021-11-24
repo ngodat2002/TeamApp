@@ -65,7 +65,7 @@
                             <TextBlock FontSize="13" TextAlignment="Center" FontFamily="Verdana" Margin="0,5,0,0" Text="{x:Bind Description}" LineStackingStrategy="MaxHeight" TextWrapping="Wrap" MaxLines="2" LineHeight="10"/>
                             <Grid Margin="0,15,0,10">
                                 <TextBlock FontFamily="Verdana" Margin="10,0,0,0" Text="{x:Bind Price}" FontSize="18" FontWeight="Bold" Foreground="Blue"/>
-                                <Button  Margin="145,0,0,0" Content="Add To Cart" Width="100" Height="30" Background="#bbae02" Foreground="White"/>
+                                <Button Tag="{x:Bind id}" Click="Button_Click"  Margin="145,0,0,0" Content="Read More" Width="100" Height="30" Background="#bbae02" Foreground="White"/>
                             </Grid>
                         </StackPanel>
                     </Grid>

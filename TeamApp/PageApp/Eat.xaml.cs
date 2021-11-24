@@ -26,6 +26,7 @@ namespace TeamApp.PageApp
     /// </summary>
     public sealed partial class Eat : Page
     {
+        public static Categories categories;
         public Eat()
         {
             this.InitializeComponent();
@@ -35,16 +36,29 @@ namespace TeamApp.PageApp
         public async void RenderCategoriesMenu()
         {
             ApiService apiService = new ApiService();
-            Categories categories = await apiService.GetCategories();
+            categories = await apiService.GetCategories();
             if (categories != null)
             {
                 foreach (var c in categories.data)
                 {
-                    Product.Items.Add(new MenuItem() { Name = c.name, Icon = new BitmapImage(new Uri(c.icon)),MenuPage="category", Category=c });
+                    Product.Items.Add(new Products() {id=c.id, ProductName = c.name, Img = new BitmapImage(new Uri(c.icon)) });
 
                 }
             }
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var id = ((Button)sender).Tag;
+
+            foreach (var c in categories.data)
+            {
+                if ((int)id == (uint)c.id)
+                {
+                    Category a = c;
+                    nextdetail.Navigate(typeof(PageApp.FoodCategories), a);
+                }
+            }
+        }
     }
 }

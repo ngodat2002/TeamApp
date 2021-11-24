@@ -11,6 +11,7 @@ namespace TeamApp.Model
 {
     class MenuItem
     {
+        public int id { get; set; }
         public string Name { get; set; } //abtract property -- Khi nao nap data vao thi moi ton o nho --> thich hop dung cho cac model-entity - DTO 
         public string MenuPage { get; set; }
         public BitmapImage Icon { get; set; }

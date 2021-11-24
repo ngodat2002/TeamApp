@@ -96,3 +96,13 @@ C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\Eat.g.cs
 C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\Eat.xaml
 C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\Eat.xbf
 C:\Users\Admin\source\SEM3\TeamApp\TeamApp\bin\x86\Debug\PageApp\Eat.xbf
+C:\Users\Admin\source\SEM3\TeamApp\TeamApp\bin\x86\Debug\PageApp\FoodDetail.xbf
+C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\FoodDetail.g.i.cs
+C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\FoodDetail.g.cs
+C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\FoodDetail.xaml
+C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\FoodDetail.xbf
+C:\Users\Admin\source\SEM3\TeamApp\TeamApp\bin\x86\Debug\PageApp\FoodDeatilOfEatIn.xbf
+C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\FoodDeatilOfEatIn.g.i.cs
+C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\FoodDeatilOfEatIn.g.cs
+C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\FoodDeatilOfEatIn.xaml
+C:\Users\Admin\source\SEM3\TeamApp\TeamApp\obj\x86\Debug\PageApp\FoodDeatilOfEatIn.xbf

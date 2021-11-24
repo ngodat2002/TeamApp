@@ -44,7 +44,7 @@ namespace TeamApp.PageApp.Services
             return null;
         }
 
-        public async Task<Foods> GetFoods()
+        public async Task<Homes> GetFoods()
         {
             HttpClient client1 = new HttpClient();
             ApiURL uRL2 = ApiURL.GetInstance();
@@ -52,10 +52,40 @@ namespace TeamApp.PageApp.Services
             if(rd.StatusCode == HttpStatusCode.OK)
             {
                 var rdContent = await rd.Content.ReadAsStringAsync();
-                Foods foods = JsonConvert.DeserializeObject<Foods>(rdContent);
+                Homes foods = JsonConvert.DeserializeObject<Homes>(rdContent);
                 return foods;
             }
             return null;
         }
+        public async Task<FoodDetails> GetProduct(Home home)
+        {
+            HttpClient httpClient = new HttpClient();
+            ApiURL uRL = ApiURL.GetInstance();
+            var rs = await httpClient.GetAsync(uRL.GetApiProduct(home.id));
+            if(rs.StatusCode == HttpStatusCode.OK)
+            {
+                var rsContent = await rs.Content.ReadAsStringAsync();
+                FoodDetails foodDetails = JsonConvert.DeserializeObject<FoodDetails>(rsContent);
+                return foodDetails;
+            }
+            return null;
+        }
+
+        public async Task<FoodDetails> GetProductOfEatin(Food foods)
+        {
+            HttpClient httpClient = new HttpClient();
+            ApiURL uRL = ApiURL.GetInstance();
+            var rs = await httpClient.GetAsync(uRL.GetApiProduct(foods.id));
+            if (rs.StatusCode == HttpStatusCode.OK)
+            {
+                var rsContent = await rs.Content.ReadAsStringAsync();
+                FoodDetails foodDetails = JsonConvert.DeserializeObject<FoodDetails>(rsContent);
+                return foodDetails;
+            }
+            return null;
+        }
+
+
     }
+
 }

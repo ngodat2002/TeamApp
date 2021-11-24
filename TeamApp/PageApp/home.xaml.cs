@@ -27,6 +27,7 @@ namespace TeamApp.PageApp
     /// </summary>
     public sealed partial class home : Page
     {
+        public static Homes foodDetails;
         public home()
         {
             this.InitializeComponent();
@@ -44,17 +45,27 @@ namespace TeamApp.PageApp
             // }
             //  }
             ApiService apiService1 = new ApiService();
-            Foods foods = await apiService1.GetFoods();
-            if (foods != null)
+             foodDetails = await apiService1.GetFoods();
+            if (foodDetails != null)
             {
-                foreach (var c in foods.data)
+                foreach (var c in foodDetails.data)
                 {
                     Product.Items.Add(new Products() { id = c.id, ProductName = c.name, Description = c.description, Price = "$" + c.price, Img = new BitmapImage(new Uri(c.image)) });
                 }
             }
         }
 
-    
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var id = ((Button)sender).Tag;
+            foreach (var d in foodDetails.data)
+            {
+                if ((int)id == (uint)d.id)
+                {
+                    Home a = d;
+                    FoodFrame.Navigate(typeof(PageApp.FoodDetail), a);
+                }
+            }
+        }
     }
 }
